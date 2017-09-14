@@ -1,6 +1,7 @@
 <?php
 class Database
 {
+    // DB connection
     private static $db_Name = 'crud_tutorial' ;
     private static $db_Host = 'localhost' ;
     private static $db_Username = 'root';
@@ -14,7 +15,7 @@ class Database
      
     public static function connect()
     {
-       // One connection through whole application
+       // cheack connection 
        if ( null == self::$cont )
        {     
         try
@@ -28,7 +29,7 @@ class Database
        }
        return self::$cont;
     }
-     
+     //disconnect function 
     public static function disconnect()
     {
         self::$cont = null;
